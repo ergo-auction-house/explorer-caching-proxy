@@ -8,6 +8,13 @@ services:
       - "9000:9000"
     command: "json-caching-proxy --config mainnet-config.json"
 
+  testnet:
+    build: .
+    restart: always
+    ports:
+      - "9001:9001"
+    command: "json-caching-proxy --config testnet-config.json"
+
   mainnet-backup:
     image: jsonfry/curl-cron:latest
     restart: always
@@ -15,4 +22,13 @@ services:
       - ".:/work"
     environment:
       - OPTIONS=mainnet:9000/proxy/har --output /work/mainnet.har
+      - CRON_SCHEDULE=0 * * * *
+
+  testnet-backup:
+    image: jsonfry/curl-cron:latest
+    restart: always
+    volumes:
+      - ".:/work"
+    environment:
+      - OPTIONS=testnet:9000/proxy/har --output /work/testnet.har
       - CRON_SCHEDULE=0 * * * *
