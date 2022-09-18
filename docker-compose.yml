@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  mainnet:
+    build: .
+    restart: always
+    ports:
+      - "9000:9000"
+    command: "json-caching-proxy --config mainnet-config.json"
+
+  mainnet-backup:
+    image: jsonfry/curl-cron:latest
+    restart: always
+    volumes:
+      - ".:/work"
+    environment:
+      - OPTIONS=mainnet:9000/proxy/har --output /work/mainnet.har
+      - CRON_SCHEDULE=0 * * * *

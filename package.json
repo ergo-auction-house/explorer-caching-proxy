@@ -1,5 +1,5 @@
 {
-  "name": "json-caching-proxy",
+  "name": "explorer-caching-proxy",
   "version": "2.0.1",
   "description": "in-memory reverse caching HAR proxy",
   "keywords": [
@@ -17,9 +17,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sonyseng/json-caching-proxy.git"
+    "url": "https://github.com/ergo-auction-house/explorer-caching-proxy.git"
   },
-  "author": "Sony Seng",
+  "author": "Sony Seng, pyotrsky",
   "license": "MIT",
   "main": "index.mjs",
   "bin": "bin.js",
