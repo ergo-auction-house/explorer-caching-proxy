@@ -30,5 +30,5 @@ services:
     volumes:
       - ".:/work"
     environment:
-      - OPTIONS=testnet:9000/proxy/har --output /work/testnet.har
+      - OPTIONS=testnet:9001/proxy/har --output /work/testnet.har
       - CRON_SCHEDULE=0 * * * *
