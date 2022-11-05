@@ -1,5 +1,5 @@
 {
-    "remoteServerUrl": "https://explorer.mempoolnode.live/",
+    "remoteServerUrl": "https:///api-testnet.ergoplatform.com/",
     "proxyPort": 9001,
     "inputHarFile": "./testnet.har",
     "cacheEverything": true,
@@ -16,3 +16,4 @@
     "overrideCors": "localhost:8081",
     "useCorsCredentials": true
 }
+
