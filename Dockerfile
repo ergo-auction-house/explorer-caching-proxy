@@ -1,5 +1,5 @@
 FROM node:17
-WORKDIR /code
+WORKDIR /work
 COPY . .
 RUN npm install -g json-caching-proxy
 EXPOSE 9000

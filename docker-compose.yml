@@ -4,6 +4,8 @@ services:
   mainnet:
     build: .
     restart: always
+    volumes:
+      - ".:/work"
     ports:
       - "9000:9000"
     command: "json-caching-proxy --config mainnet-config.json"
@@ -11,6 +13,8 @@ services:
   testnet:
     build: .
     restart: always
+    volumes:
+      - ".:/work"
     ports:
       - "9001:9001"
     command: "json-caching-proxy --config testnet-config.json"

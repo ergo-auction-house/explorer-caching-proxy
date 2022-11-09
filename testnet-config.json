@@ -1,5 +1,5 @@
 {
-    "remoteServerUrl": "https:///api-testnet.ergoplatform.com/",
+    "remoteServerUrl": "https://api-testnet.ergoplatform.com",
     "proxyPort": 9001,
     "inputHarFile": "./testnet.har",
     "cacheEverything": true,
